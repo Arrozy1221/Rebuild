@@ -64,6 +64,15 @@
   box-sizing: border-box;
 }
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -152,6 +161,7 @@ h6, .h6 {
 #visi-misi{
   background-color: #2F2F2F;
   color: #fff;
+  box-sizing: border-box;
 }
 
 p {
@@ -4381,6 +4391,7 @@ textarea.form-control-lg {
   background-size: 15%, 15%;
   background-repeat: no-repeat, no-repeat;
   background-position: top right, 80% 100%;
+  box-sizing: border-box;
 }
 }
 @media (min-width: 1400px) {
@@ -5744,8 +5755,11 @@ textarea.form-control-lg {
     border-radius: 0;
   }
 
+  #product .row{
+    margin: auto;
+  }
   .jumbotron hr{
-    width: 20.5rem;
+    width: 16.5rem;
   }
   .form-control{
     width: 80%;
@@ -11602,6 +11616,7 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  box-sizing: border-box;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -11620,11 +11635,13 @@ header.masthead .masthead-heading {
 #product{
   background-size: 100%;
   background-image: url("../assets/skins/background_1.png");
+  box-sizing: border-box;
 }
 
 #services{
   background-size: 100%;
   background-image: url("../assets/skins/background2_3.png");
+  box-sizing: border-box;
 }
 .mask-custom {
   backdrop-filter: blur(5px);
@@ -11635,6 +11652,7 @@ header.masthead .masthead-heading {
   background: linear-gradient(rgba(156,162,141,0.8), rgba(150,160,141,0.7)), url("/assets/skins/building_1.png") fixed center;
   background-size: cover;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 
