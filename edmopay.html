@@ -34,7 +34,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
                         <li class="nav-item">
                             <div class="rectangle-rounded">
-                                <a class="nav-link ms-2 me-2" href="#">Download</a>
+                                <a class="nav-link" href="#">Download</a>
                             </div>
                         </li>
                     </ul>
@@ -57,8 +57,8 @@
 
         <!--About-->
         <section class="page-section" id="about">
-            <div class="container">
-                <div data-aos="fade-up" data-aos-duration="2500">
+            <div class="container reveal">
+                <!-- <div data-aos="fade-up" data-aos-duration="2500"> -->
                     <div class="row">
                     <div class="col">
                         <img src="assets/skins/LOGO-01 2.png" alt="">
@@ -69,20 +69,18 @@
                             EDMOPAY merupakan aplikasi pembayaran online berbasis android yang dapat memberikan kemudahan transaksi kepada masyarakat.
                         </h3>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
         </section>
 
         <!--Service-->
         <section class="page-section" id="service">
-            <div class="container">
-                <div data-aos="fade-up" data-aos-duration="2000">
+            <div class="container reveal">
                     <h2 class="section-heading text-center mb-5">Our Service</h2>
                     <h3 class="section-textlayout text-center">Saat ini EDMOPAY memiliki lebih dari 500+ produk 
                         dan layanan yang telah terintegrasi dan dapat dibayarkan melalui kios pembayaran. 
                         Jumlah tersebut akan terus bertambah seiring dengan semakin berkembangnya kerjasama yang dilakukan 
                         oleh MYX dengan berbagai penyedia layanan dan produk.</h3>
-                </div>
             </div>
         </section>
 
@@ -145,15 +143,12 @@
         </footer>
         
         <!--Animation-->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
         <script>
            const navbar = document.querySelector(".navbar");
            window.onscroll = ()=>{
                this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
            }
-
-            AOS.init();
         </script>
 
         <!-- Bootstrap core JS-->

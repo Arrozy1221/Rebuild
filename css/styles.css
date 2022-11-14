@@ -5732,6 +5732,9 @@ textarea.form-control-lg {
   .modal-fullscreen-sm-down .modal-footer {
     border-radius: 0;
   }
+  .jumbotron hr{
+    width: 60%;
+  }
 }
 @media (max-width: 767.98px) {
   .modal-fullscreen-md-down {
@@ -5759,7 +5762,7 @@ textarea.form-control-lg {
     margin: auto;
   }
   .jumbotron hr{
-    width: 16.5rem;
+    width: 70%;
   }
   .form-control{
     width: 80%;
@@ -11643,6 +11646,14 @@ header.masthead .masthead-heading {
   background-image: url("../assets/skins/background2_3.png");
   box-sizing: border-box;
 }
+#product .card{
+  width: 16rem;
+  height: 22rem;
+}
+#product .row{
+  max-width: 100%;
+}
+
 .mask-custom {
   backdrop-filter: blur(5px);
   background-color: rgba(156,162,141,0.85);
@@ -11814,4 +11825,16 @@ section#contact form#contactForm :-ms-input-placeholder {
 	background-color: none;
 	animation: fadeIn 2s ease; 
 	animation-play-state: running;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }
