@@ -73,6 +73,7 @@ html,body
     overflow-x: hidden; 
 }
 
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -2208,7 +2209,7 @@ progress {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -11561,7 +11562,8 @@ hr.long{
   color: #fff;
   letter-spacing: 0.0625em;
 }
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover{
+/* #mainNav .navbar-nav .nav-item .nav-link.active,  */
+#mainNav .navbar-nav .nav-item .nav-link:hover{
   color: #9CA28D;
 }
 
@@ -11599,12 +11601,11 @@ hr.long{
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
   }
-  #mainNav .navbar-nav .nav-item .nav-link.active{
-    color: #9CA28D;
+  /* #mainNav .navbar-nav .nav-item .nav-link.active{
     text-decoration: underline 3px;
     text-underline-position: under;
     text-underline-offset: 0.25rem;
-  }
+  } */
   #visi-misi h2{
     margin-left: 15%;
   }
@@ -11760,7 +11761,7 @@ section#contact form#contactForm .form-group-textarea {
 }
 section#contact form#contactForm .form-group-textarea textarea {
   height: 100%;
-  min-height: 10rem;
+  min-height: 5rem;
 }
 section#contact form#contactForm p.help-block {
   margin: 0;
