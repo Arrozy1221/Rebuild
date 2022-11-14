@@ -11562,7 +11562,7 @@ hr.long{
   color: #fff;
   letter-spacing: 0.0625em;
 }
-/* #mainNav .navbar-nav .nav-item .nav-link.active,  */
+#mainNav .navbar-nav .nav-item .nav-link.active, 
 #mainNav .navbar-nav .nav-item .nav-link:hover{
   color: #9CA28D;
 }
@@ -11601,11 +11601,11 @@ hr.long{
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
   }
-  /* #mainNav .navbar-nav .nav-item .nav-link.active{
+  #mainNav .navbar-nav .nav-item .nav-link.active{
     text-decoration: underline 3px;
     text-underline-position: under;
     text-underline-offset: 0.25rem;
-  } */
+  }
   #visi-misi h2{
     margin-left: 15%;
   }
