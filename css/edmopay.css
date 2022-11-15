@@ -11612,19 +11612,6 @@ header.masthead .masthead-heading {
 
 /* animation */
 
-.reveal{
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 1s all ease;
-}
-
-.reveal.active{
-  transform: translateY(0);
-  opacity: 1;
-}
-
-
 @keyframes fadeIn {
 	from{
 		margin-top: 30%
@@ -11649,4 +11636,16 @@ header.masthead .masthead-heading {
 	background-color: none;
 	animation: fadeIn 2s ease; 
 	animation-play-state: running;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }
