@@ -131,7 +131,7 @@
                                 <h5 class="card-title">EDMOPAY</h5>
                                 <p class="card-text">Payment Point Online Bank Mobile App</p>
                                 <div class="text-end mt-2">
-                                    <a href="/edmopay.html" target="_blank"><img src="assets/skins/vector_ek2.png"></a>
+                                    <a href="edmopay1.php" target="_blank"><img src="assets/skins/vector_ek2.png"></a>
                                 </div>
                             </div>
                         </div>

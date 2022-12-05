@@ -1,3 +1,38 @@
+<?php
+
+require_once("koneksi.php");
+
+if(isset($_POST['register'])){
+
+    // filter data yang diinputkan
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING); //nama
+    $alamat = filter_input(INPUT_POST, 'alamat', FILTER_SANITIZE_STRING); //alamat
+    $telp = filter_input(INPUT_POST, 'telp', FILTER_SANITIZE_STRING); //email
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING); //no tlp
+
+    // menyiapkan query
+    $sql = "INSERT INTO users (name, alamat, email, telp) 
+            VALUES (:name, :alamat, :email, :telp)";
+    $stmt = $db->prepare($sql);
+
+    // bind parameter ke query
+    $params = array(
+        ":name" => $name,
+        ":alamat" => $alamat,
+        ":telp" => $telp,
+        ":email" => $email
+    );
+
+    // eksekusi query untuk menyimpan ke database
+    $saved = $stmt->execute($params);
+
+    // jika query simpan berhasil, maka user sudah terdaftar
+    // maka alihkan ke halaman login
+    if($saved) header("Location: edmopay1.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -83,49 +118,60 @@
         </section>
 
         <!-- Form-->
-        <section class="page-section" id="contact">
+        <section class="page-section">
             <div class="container">
                 <h2 class="section-heading text-center">BUAT AKUN SEKARANG</h2>
                 
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <form action="" method="POST">
+                    <!-- input nama -->
                     <div class="form-group w-100 mt-3">
-                        <!-- Name input-->
-                        <label>Nama Lengkap</label>
-                        <input class="form-control mt-3 mb-3" id="nama" type="text" placeholder="Masukkan Nama Lengkap Anda *" data-sb-validations="required" />
-                        <div class="invalid-feedback" data-sb-feedback="nama:required">Masukkan Nama Anda.</div>
+                        <label for="name">Nama</label>
+                        <input class="form-control mt-3 mb-3" type="text" name="name" placeholder="Masukan Nama Lengkap Anda *" data-sb-validations="required" />
                     </div>
+                    
+                    <!-- input alamat -->
                     <div class="form-group w-100 mt-3">
-                        <!-- Name input-->
-                        <label>Alamat</label>
-                        <input class="form-control mt-3 mb-3" id="alamat" type="text" placeholder="Masukkan Alamat Anda *" data-sb-validations="required" />
-                        <div class="invalid-feedback" data-sb-feedback="name:required">Masukkan Alamat Anda.</div>
+                        <label for="alamat">Alamat</label>
+                        <input class="form-control mt-3 mb-3" type="text" name="alamat" placeholder="Masukan Alamat Lengkap Anda *" data-sb-validations="required" />
                     </div>
-                    <div class="form-group w-100">
-                        <!-- Email address input-->
-                        <label>Email</label>
-                        <input class="form-control mt-3 mb-3" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
-                        <div class="invalid-feedback" data-sb-feedback="email:required">Masukkan Email Anda.</div>
-                        <div class="invalid-feedback" data-sb-feedback="email:email">Email Tidak Valid.</div>
-                    </div>
+
+                    <!-- input email -->
                     <div class="form-group w-100 mt-3">
-                        <!-- Name input-->
-                        <label>Nomor Telepon</label>
-                        <input class="form-control mt-3 mb-3" id="telp" type="number" placeholder="Masukkan Nomor Telepon Anda *" data-sb-validations="required" />
-                        <div class="invalid-feedback" data-sb-feedback="name:required">Masukkan Nomor Telepon Anda.</div>
+                        <label for="email">Email</label>
+                        <input class="form-control mt-3 mb-3" type="email" name="email" placeholder="Masukan Email Anda *" data-sb-validations="required"/>
+                    </div>      
+
+                    <!-- input telp -->
+                    <div class="form-group w-100 mt-3">
+                        <label for="telp">No telphone</label>
+                        <input class="form-control mt-3 mb-3" type="text" name="telp" placeholder="Masukan No. Telphone Anda *" data-sb-validations="required" />
                     </div>
-                    <div class="d-none" id="submitSuccessMessage">
+
+                    <!-- daftar -->
+                    <div class="text-center">
+                        <input class="btn btn-primary btn-xl text-uppercase disable mt-3" type="submit" class="btn btn-success btn-block" name="register" value="Daftar" />
+                    </div>
+                                       
+                    <!-- <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center text-white mb-3">
                             <div class="fw-bolder">Form Berhasil Dikirim</div>
                             <br />
                             <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                         </div>
-                    </div>
+                    </div> -->
+
                     <!-- Submit error message-->
 
                     <!-- This is what your users will see when there is-->
                     <!-- an error message-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disable mt-3" id="submitButton" type="submit">DAFTAR</button></div>
+                    <!-- <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error sending message!</div>
+                    </div> -->
+                    
+                    <!-- <div class="text-center">
+                        <button class="btn btn-primary btn-xl text-uppercase disable mt-3" type="submit" name="Submit" value="Submit" >DAFTAR</button>
+                    </div> -->
+
                 </form>
             </div>
         </section>
